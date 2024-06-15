@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        saturn: "url('./src/assets/main_saturn.png')",
+        saturn: "url('https://i.ibb.co/TTtXrpn/main-saturn.jpg')",
       },
       fontFamily: {
         mont: ['var(--font-mont)', ...fontFamily.sans],
