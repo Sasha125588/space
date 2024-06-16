@@ -9,7 +9,6 @@ import Header from "../components/header/Header";
 function GalleryPage() {
     const { photos } = useContext(GalleryContext);
 
-
     return (
         <div className="bg-black">
             <Header />
