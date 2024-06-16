@@ -9,5 +9,5 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   if (loading) {
     return <Spin fullscreen />;
   }
-  return <div className="h-screen w-screen">{children}</div>;
+  return <div className="h-screen w-full">{children}</div>;
 };

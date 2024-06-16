@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import PlanetsPage from './pages/PlanetsPage';
+import GalleryPage from './pages/GalleryPage';
 
 function App() {
   return (
@@ -12,8 +13,12 @@ function App() {
         <Routes>
           <Route path="/planets" element={<PlanetsPage />} />
         </Routes>
+        <Routes>
+          <Route path="/gallery" element={<GalleryPage />} />
+        </Routes>
       </div>
     </Router>
+
   );
 }
 

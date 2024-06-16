@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { useContext } from "react";
 
+
 const GalleryContext = createContext({
   photos: [],
   loading: false,
@@ -17,19 +18,18 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
         method: "GET",
         headers: {
           accept: "application/json",
-          "X-API-KEY": "UjmxUFmXZmvYsX01Am+SV7hR6GBuqeomx40m3U6F8Qg=",
+          "X-API-KEY": "NWo7LVkiVh8dNMP9TwYCsNE55kFj1YXnplZ4HzfD",
         },
       };
 
       const response = await fetch(
-        "https://api.nasa.gov/planetary/apod?api_key=NWo7LVkiVh8dNMP9TwYCsNE55kFj1YXnplZ4HzfD&count=50&thumbs=true",
+        "https://api.nasa.gov/planetary/apod?api_key=NWo7LVkiVh8dNMP9TwYCsNE55kFj1YXnplZ4HzfD&count=51&thumbs=true",
         options
       );
 
 
       const result = await response.json();
       const all = result;
-      console.log(all)
 
       setPhotos(all);
       setLoading(false);
