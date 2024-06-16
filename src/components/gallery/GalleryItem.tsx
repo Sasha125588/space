@@ -1,3 +1,4 @@
+import {useNavigate } from "react-router-dom"
 
 
 export type Props = {
@@ -13,8 +14,15 @@ export type Props = {
 
 export const GalleryItem = ({ photo }: { photo: Props }) => {
 
+  const navigate = useNavigate()
+
+
+  const handleClick = () => {
+    navigate(`/gallery/${photo.title}`)
+  }
+
   return (
-    <div className="w-[400px] h-[455px] relative  rounded-xl bg-zinc-900">
+    <div className="w-[400px] h-[455px] relative  rounded-xl bg-zinc-900" onClick={handleClick} >
       <img className="rounded-t-xl w-[400px] h-[300px]" src={photo.url} />
       <div className="px-2 mt-1 text-center truncate overflow-hidden">
         <span className="font-bold text-base text-white	">{photo.title}</span>
