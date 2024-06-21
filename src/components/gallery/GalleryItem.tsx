@@ -1,4 +1,7 @@
 import {useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux";
+import { setCurrentPhoto } from "../../redux/photo/reducer";
+
 
 
 export type Props = {
@@ -13,11 +16,12 @@ export type Props = {
 };
 
 export const GalleryItem = ({ photo }: { photo: Props }) => {
-
+  const dispatch = useDispatch()
   const navigate = useNavigate()
 
 
   const handleClick = () => {
+    dispatch(setCurrentPhoto(photo))
     navigate(`/gallery/${photo.title}`)
   }
 

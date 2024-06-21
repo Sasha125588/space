@@ -3,10 +3,13 @@ import HomePage from './pages/HomePage';
 import PlanetsPage from './pages/PlanetsPage';
 import GalleryPage from './pages/GalleryPage';
 import PhotoPage from './pages/PhotoPage';
+import { Provider } from 'react-redux';
+import { store } from './redux/index';
 
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <div className="">
         <Routes>
@@ -23,6 +26,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </Provider>
 
   );
 }
