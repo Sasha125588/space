@@ -1,12 +1,13 @@
-import Header from '../components/header/Header';
+import Planets from "../components/planets/Planets.tsx";
 
 function PlanetsPage() {
   return (
     <>
-      <div className="bg-black ">
-        <Header />
-        <div></div>
+    <div className="bg-solarSystem h-screen">
+      <div className="w-full flex flex-col items-center justify-center">
+        <Planets />
       </div>
+    </div>
     </>
   );
 }

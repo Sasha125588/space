@@ -24,7 +24,7 @@ function PhotoPage() {
 
   return (
     <>
-      <div className="bg-black text-white  ">
+      <div className="bg-solarSystem text-white  ">
         <Header />
         <div className="text-white bg-black flex justify-center h-full">
       <div className="">

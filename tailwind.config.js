@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundImage: {
         saturn: "url('https://i.ibb.co/TTtXrpn/main-saturn.jpg')",
+        solarSystem: "url('https://www.solarsystemscope.com/textures/download/2k_stars.jpg')"
       },
       fontFamily: {
         mont: ['var(--font-mont)', ...fontFamily.sans],

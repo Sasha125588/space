@@ -10,9 +10,9 @@ function GalleryPage() {
     const { photos } = useContext(GalleryContext);
 
     return (
-        <div className="bg-black">
+        <div className="bg-solarSystem">
             <Header />
-        <div className="bg-black justify-center flex flex-wrap mt-3 pb-3	gap-6">                   
+        <div className=" justify-center flex flex-wrap mt-3 pb-3	gap-6">                   
         {photos.map((photo) => (
           <GalleryItem photo={photo} />
         ))}
