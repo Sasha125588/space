@@ -32,17 +32,19 @@ function PlanetPage() {
       <div className="bg-solarSystem h-full">
         <Header />
         <div className='text-white flex flex justify-between'>
-          <div className='flex flex-col p-6'>
-            <h2 className='text-6xl font-semibold'>{planet.name}</h2>
-            <div className='flex gap-4'>
-              <h3>{planet.tagline}</h3>
-              <img className='w-[20px] h-[20px]' src={planet.tagline_icon} alt={planet.tagline} />
+          <div className='flex flex-col p-6 w-[50%]'>
+            <h2 className='text-6xl font-semibold '>{planet.name}</h2>
+            <div className='flex gap-3 items-center pt-3'>
+              <img className='w-[30px] h-[30px]' src={planet.tagline_icon} alt={planet.tagline} />
+              <h3 className='text-lg'>{planet.tagline}</h3>
             </div>
-            <img className='w-[300px] h-[300px]' src={planet.picture} alt={planet.name} />
-            <p className='text-lg w-[800px]'>{planet.description}</p>
+            <div className='flex justify-center'>
+              <img className='w-[400px] h-[400px]' src={planet.picture} alt={planet.name} />
+            </div>
+            <p className='text-xl '>{planet.description}</p>
           </div>
-          <div className='w-[500px] h-[500px] pt-6'>
-            <img className='w-[500px] h-[500px]' src={planet.textureUrl} alt={planet.name} />
+          <div className='w-[700px] h-[700px] pb-4 pt-6 pr-6'>
+            <img className='w-[100%] h-[100%]' src={planet.textureUrl} alt={planet.name} />
           </div>
         </div>
       </div>
