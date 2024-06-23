@@ -1,8 +1,8 @@
 import { motion } from "framer-motion"
 import {useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux";
-import { setCurrentPhoto } from "../../redux/photo/reducer";
 import { IplanetsInfo } from "../../context/crypto-context";
+import { setCurrentPlanet } from "../../redux/planet/reducer";
 
 
 const Planet = ({ name, className, scale, picture, x }: { name:string, className:string, scale:number, picture:string, x:string}) => {
@@ -25,12 +25,12 @@ function Planets({planet}: {planet: IplanetsInfo}) {
 
 
   const handleClick = () => {
-    dispatch(setCurrentPhoto(planet))
+    dispatch(setCurrentPlanet(planet))
     navigate(`/planets/${planet.name}`)
   }
   return (
     <div>
-    <motion.div className="bg-solarSystem text-white pt-40 flex items-center" onClick={handleClick} >
+    <motion.div className="bg-solarSystem text-white pt-60 flex items-center" onClick={handleClick} >
                 <Planet name={planet.name} className={planet.className} scale={planet.scale} x={planet.x_position} picture={planet.picture} />
       </motion.div>
     </div>

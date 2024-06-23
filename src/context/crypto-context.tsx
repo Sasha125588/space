@@ -89,7 +89,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       const planetsInfo: IplanetsInfo[] = [
       {
         name: "Sun",
-        className: "w-[500px] h-[500px]",
+        className: "w-[500px] h-[500px] ml-6",
         x_position: "-80vw",
         scale: 1,
         tagline: "a G-type main-sequence star",

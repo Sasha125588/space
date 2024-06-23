@@ -23,28 +23,28 @@ interface planetProps {
 }
 
 function PlanetPage() {
-  const photo = useSelector((state: planetProps) => state.planet.currentPlanet);
+  const planet = useSelector((state: planetProps) => state.planet.currentPlanet);
 
-  if (!photo) return null;
+  if (!planet) return null;
 
   return (
     <>
-      <div className="bg-solarSystem text-white  ">
+      <div className="bg-solarSystem h-full">
         <Header />
-        <div className="text-white bg-black flex justify-center h-full">
-      <div className="">
-        <div className="w-[100%] h-full bg-zinc-700  flex justify-between p-4">
-          <div className="w-[70%] flex flex-col items-center">
-            <h1 className="mb-3 text-xl	font-semibold">{photo.name}</h1>
-            <img className="rounded-lg w-[90%] h-[700px]" src={photo.picture} />
+        <div className='text-white flex flex justify-between'>
+          <div className='flex flex-col p-6'>
+            <h2 className='text-6xl font-semibold'>{planet.name}</h2>
+            <div className='flex gap-4'>
+              <h3>{planet.tagline}</h3>
+              <img className='w-[20px] h-[20px]' src={planet.tagline_icon} alt={planet.tagline} />
+            </div>
+            <img className='w-[300px] h-[300px]' src={planet.picture} alt={planet.name} />
+            <p className='text-lg w-[800px]'>{planet.description}</p>
           </div>
-          <div className="w-[30%] pt-6 flex flex-col justify-between	">
-              <p className='text-lg'>{photo.description}</p>
-              <p className='font-semibold text-xl'>{photo.tagline}</p>
+          <div className='w-[500px] h-[500px] pt-6'>
+            <img className='w-[500px] h-[500px]' src={planet.textureUrl} alt={planet.name} />
           </div>
         </div>
-      </div>
-    </div>
       </div>
 
     </>
