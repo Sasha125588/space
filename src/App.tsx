@@ -5,6 +5,7 @@ import GalleryPage from './pages/GalleryPage';
 import PhotoPage from './pages/PhotoPage';
 import { Provider } from 'react-redux';
 import { store } from './redux/index';
+import PlanetPage from './pages/PlanetPage';
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
         </Routes>
          <Routes>
           <Route path="/gallery/:title" element={<PhotoPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/planets/:title" element={<PlanetPage />} />
         </Routes>
       </div>
     </Router>
