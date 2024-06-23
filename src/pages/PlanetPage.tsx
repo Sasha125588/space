@@ -43,7 +43,7 @@ function PlanetPage() {
             </div>
             <p className='text-xl '>{planet.description}</p>
           </div>
-          <div className='w-[700px] h-[700px] pb-4 pt-6 pr-6'>
+          <div className='w-[700px] h-[700px] pt-6 pr-6'>
             <img className='w-[100%] h-[100%]' src={planet.textureUrl} alt={planet.name} />
           </div>
         </div>
