@@ -1,35 +1,35 @@
 import { motion } from "framer-motion"
 import { planetsInfo } from '../../context/crypto-context';
-import { Header } from "antd/es/layout/layout";
 
 
-const Planet = ({ name, picture, x, y }: { name:string, picture:string, x:string, y:string }) => {
+const Planet = ({ name, className, scale, picture, x }: { name:string, className:string, scale:number, picture:string, x:string}) => {
     return (
       <motion.div
-        className="w-16 h-16 flex items-center justify-center text-center rounded-full text-sm font-semibold shadow-dark cursor-pointer absolute"
-        style={{ x, y }}
-        initial={{ x: 0, y: -100 }}
-        whileInView={{ x: x, y: y }}
+        className=" flex items-center justify-center text-center rounded-full text-sm font-semibold shadow-dark cursor-pointer absolute"
+        style={{ x }}
+        whileInView={{ x: x }}
         viewport={{ once: true }}
         transition={{ duration: 1.5 }}
       >
-    <motion.img whileHover={{ scale: 1.1 }} className='' src={picture} alt={name + "picture"} />      </motion.div>
+    <motion.img whileHover={{ scale: scale }} className={className} src={picture} alt={name + "picture"} />      </motion.div>
     );
 };
 
 function Planets() {
   return (
     <div>
-      <Header />
-    <div className="bg-solarSystem text-white">
-                <Planet name={planetsInfo.Mercury.name} x="-21vw" y="-2vw" picture={planetsInfo.Mercury.picture} />
-                <Planet name={planetsInfo.Venus.name} x="5vw" y="-16.8vw" picture={planetsInfo.Venus.picture} />
-                <Planet name={planetsInfo.Earth.name} x="-16vw" y="-19vw" picture={planetsInfo.Earth.picture} />
-                <Planet name={planetsInfo.Mars.name} x="25vw" y="-9vw" picture={planetsInfo.Mars.picture} />
-                <Planet name={planetsInfo.Jupiter.name} x="19vw" y="12.5vw" picture={planetsInfo.Jupiter.picture} />
-                <Planet name={planetsInfo.Saturn.name} x="2vw" y="21vw" picture={planetsInfo.Saturn.picture} />
-                <Planet name={planetsInfo.Uranus.name} x="13.8vw" y="1vw" picture={planetsInfo.Uranus.picture} />
-                <Planet name={planetsInfo.Neptune.name} x="-15vw" y="14vw" picture={planetsInfo.Neptune.picture} />
+    <div className="bg-solarSystem text-white pt-12">
+                <Planet name={planetsInfo.Sun.name} className="w-[500px] h-[500px]" scale={1} x="-80vw" picture={planetsInfo.Sun.picture} />
+                <div className="pt-60 flex items-center">
+                <Planet name={planetsInfo.Mercury.name} className="w-[25px] h-[25px]" scale={1.1} x="-43vw" picture={planetsInfo.Mercury.picture} />
+                <Planet name={planetsInfo.Venus.name} className="w-[60px] h-[60px]" scale={1.1} x="-38vw"     picture={planetsInfo.Venus.picture} />
+                <Planet name={planetsInfo.Earth.name} className="w-[60px] h-[60px]" scale={1.1} x="-29vw"   picture={planetsInfo.Earth.picture} />
+                <Planet name={planetsInfo.Mars.name} className="w-[45px] h-[45px]" scale={1.1} x="-21vw"     picture={planetsInfo.Mars.picture} />
+                <Planet name={planetsInfo.Jupiter.name} className="w-[250px] h-[250px]" scale={1.05} x="-15vw"  picture={planetsInfo.Jupiter.picture} />
+                <Planet name={planetsInfo.Saturn.name} className="w-[420px] h-[280px]" scale={1.05} x="2vw"    picture={planetsInfo.Saturn.picture} />
+                <Planet name={planetsInfo.Uranus.name} className="w-[100px] h-[100px]" scale={1.1} x="31vw" picture={planetsInfo.Uranus.picture} />
+                <Planet name={planetsInfo.Neptune.name} className="w-[100px] h-[100px]" scale={1.1} x="42vw" picture={planetsInfo.Neptune.picture} />
+                </div>
       </div>
     </div>
   )
