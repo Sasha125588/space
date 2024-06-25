@@ -32,13 +32,19 @@ function PlanetPage() {
       <div className="bg-solarSystem h-full">
         <Header />
         <div className='text-white flex flex justify-between'>
-          <div className='flex flex-col p-6 w-[50%]'>
+          <div className='flex flex-col p-4 w-[50%]'>
             <h2 className='text-6xl font-semibold '>{planet.name}</h2>
             <div className='flex gap-3 items-center pt-3'>
               <img className='w-[30px] h-[30px]' src={planet.tagline_icon} alt={planet.tagline} />
               <h3 className='text-lg'>{planet.tagline}</h3>
             </div>
-            <div className='flex justify-center'>
+            <div className='flex justify-between '>
+              <div className='flex flex-col text-base	 gap-2 pt-10'>
+                <h4>Distance from sun: <p className='font-semibold'>{planet.distanceFromSun}</p> </h4>
+                <h4>Year length: <p className='font-semibold'>{planet.yearLength}</p></h4>
+                <h4>Number of moons: <p className='font-semibold'>{planet.numberOfMoons}</p></h4>
+                <h4>Namesake: <p className='font-semibold'>{planet.namesake}</p></h4>                
+              </div>
               <img className='w-[400px] h-[400px]' src={planet.picture} alt={planet.name} />
             </div>
             <p className='text-xl '>{planet.description}</p>
