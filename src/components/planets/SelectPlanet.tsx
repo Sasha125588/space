@@ -12,7 +12,7 @@ interface SelectPlanetProps {
 function SelectPlanet({ planets }: SelectPlanetProps) {
   const [select, setSelect] = useState(false);
   const [search, setSearch] = useState<string | undefined>();
-  const [planetState, setPlanetState] = useState<Iplanet | undefined>();
+  const [, setPlanetState] = useState<Iplanet | undefined>();
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
