@@ -22,6 +22,11 @@ export interface IplanetsInfo {
   spaceTexture_url: string
 }
 
+export interface Iplanet {
+  name: string,
+  picture: string,
+}
+
 export interface IPhoto {
         date: string;
         copyright:string

@@ -2,23 +2,21 @@ import { motion } from 'framer-motion';
 import { Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { IoMdPlanet } from 'react-icons/io';
-import { TreeSelect } from 'antd';
-import type { TreeSelectProps } from 'antd';
-import { useState } from 'react';
+import SelectPlanet from '../planets/SelectPlanet';
+import { useContext } from 'react';
+import GalleryContext from '../../context/crypto-context';
+
+
+
 
 const { Title } = Typography;
 
 const Header = () => {
-  const [value, setValue] = useState<string>();
+  const { planets } = useContext(GalleryContext);
 
-  const onChange = (newValue: string) => {
-    setValue(newValue);
-  };
 
-  const onPopupScroll: TreeSelectProps['onPopupScroll'] = (e) => {
-    console.log('onPopupScroll', e);
-  };
   const SpaceX = 'Space<X>';
+
 
   return (
     <>
@@ -64,17 +62,7 @@ const Header = () => {
             </motion.li>
           </ul>
         </motion.div>
-        <TreeSelect
-          showSearch
-          style={{ width: '15%' }}
-          value={value}
-          dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
-          placeholder="Search planets..."
-          allowClear
-          treeDefaultExpandAll
-          onChange={onChange}
-          onPopupScroll={onPopupScroll}
-        />
+        <SelectPlanet planets={planets}/>
       </motion.div>
     </>
   );

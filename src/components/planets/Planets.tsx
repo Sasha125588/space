@@ -23,11 +23,11 @@ function Planets({planet}: {planet: IplanetsInfo}) {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-
   const handleClick = () => {
     dispatch(setCurrentPlanet(planet))
     navigate(`/planets/${planet.name}`)
   }
+  
   return (
     <div>
     <motion.div className="bg-solarSystem text-white pt-60 flex items-center" onClick={handleClick} >
