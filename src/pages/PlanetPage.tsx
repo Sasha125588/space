@@ -1,4 +1,3 @@
-import Header from '../components/header/Header';
 import { useSelector } from 'react-redux';
 
 interface planetProps {
@@ -30,7 +29,6 @@ function PlanetPage() {
   return (
     <>
       <div className="bg-solarSystem h-full">
-        <Header />
         <div className='text-white flex flex justify-between'>
           <div className='flex flex-col p-4 w-[50%]'>
             <h2 className='text-6xl font-semibold '>{planet.name}</h2>

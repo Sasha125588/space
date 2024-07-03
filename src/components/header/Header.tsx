@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <>
-      <motion.div className="px-12 pt-3 pb-3 text-center flex items-center justify-between">
+      <motion.div className="px-12 pt-3 w-full	 pb-3 text-center flex items-center justify-between bg-solarSystem">
         <motion.div className=" ">
           <Link className="flex items-center text-center justify-center" to="/">
             {' '}

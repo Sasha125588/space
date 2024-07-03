@@ -11,8 +11,7 @@ function GalleryPage() {
 
     return (
         <div className="bg-solarSystem">
-            <Header />
-        <div className=" justify-center flex flex-wrap mt-3 pb-3	gap-6">                   
+        <div className=" justify-center flex flex-wrap pb-3	gap-6">                   
         {photos.map((photo) => (
           <GalleryItem photo={photo} />
         ))}

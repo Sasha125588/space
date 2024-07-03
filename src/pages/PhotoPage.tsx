@@ -1,4 +1,3 @@
-import Header from '../components/header/Header';
 import { useSelector } from 'react-redux';
 
 
@@ -25,7 +24,6 @@ function PhotoPage() {
   return (
     <>
       <div className="bg-solarSystem text-white  ">
-        <Header />
         <div className="text-white bg-black flex justify-center h-full">
       <div className="">
         <div className="w-[100%] h-full bg-zinc-700  flex justify-between p-4">

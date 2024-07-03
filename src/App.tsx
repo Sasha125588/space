@@ -6,12 +6,14 @@ import PhotoPage from './pages/PhotoPage';
 import { Provider } from 'react-redux';
 import { store } from './redux/index';
 import PlanetPage from './pages/PlanetPage';
+import Header from './components/header/Header';
 
 
 function App() {
   return (
     <Provider store={store}>
     <Router>
+      <Header />
       <div className="">
         <Routes>
           <Route path="/" element={<HomePage />} />
