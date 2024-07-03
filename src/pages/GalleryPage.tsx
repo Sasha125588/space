@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import GalleryContext from "../context/crypto-context";
 import { GalleryItem } from "../components/gallery/GalleryItem";
-import Header from "../components/header/Header";
-
 
 
 
