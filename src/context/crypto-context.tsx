@@ -5,6 +5,7 @@ import { useContext } from "react";
 export interface IplanetsInfo {
   name: string,
   className: string,
+  pictureSize: string,
   x_position: string,
   scale: number,
   tagline: string,
@@ -74,6 +75,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       interface IplanetsInfo {
         name: string,
         className: string,
+        pictureSize: string,
         x_position: string,
         scale: number,
         tagline: string,
@@ -95,6 +97,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         name: "Sun",
         className: "w-[500px] h-[500px] ml-6",
+        pictureSize: "w-[450px] h-[400px] animate-spin-slow",
         x_position: "-80vw",
         scale: 1,
         tagline: "a G-type main-sequence star",
@@ -114,6 +117,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         "name": "Mercury",
         className: "w-[25px] h-[25px]",
+        pictureSize: 'w-[400px] h-[350px] animate-spin-slow',
         x_position: "-43vw",
         scale: 1.1,
         "tagline": "Terrestrial Planet",
@@ -133,6 +137,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         "name": "Venus",
         className: "w-[60px] h-[60px]",
+        pictureSize: 'w-[400px] h-[380px] animate-spin-slow',
         x_position: "-36vw",
         scale: 1.1,
         "tagline": "Terrestrial Planet",
@@ -152,6 +157,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         name: "Earth",
         className: "w-[60px] h-[60px]",
+        pictureSize: 'w-[400px] h-[400px] animate-spin-slow',
         x_position: "-29vw",
         scale: 1.1,
         tagline: "Terrestrial Planet",
@@ -171,6 +177,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         "name": "Mars",
         className: "w-[45px] h-[45px]",
+        pictureSize: 'w-[400px] h-[400px] animate-spin-slow',
         x_position: "-21vw",
         scale: 1.1,
         "tagline": "Terrestrial Planet",
@@ -190,6 +197,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         "name": "Jupiter",
         className: "w-[250px] h-[250px]",
+        pictureSize: 'w-[400px] h-[420px] animate-spin-slow',
         x_position: "-15vw",
         scale: 1.05,
         "tagline": "Gas Giant",
@@ -209,6 +217,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         "name": "Saturn",
         className: "w-[420px] h-[280px]",
+        pictureSize: 'w-[500px] h-[360px] animate-spin-slow mb-12',
         x_position: "2vw",
         scale: 1.05,
         "tagline": "Gas Giant",
@@ -228,6 +237,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         "name": "Uranus",
         className: "w-[100px] h-[100px]",
+        pictureSize: 'w-[400px] h-[400px] animate-spin-slow',
         x_position: "32vw",
         scale: 1.1,
         "tagline": "Ice Giant",
@@ -247,6 +257,7 @@ export function GalleryContextProvider({ children }: {children: React.ReactNode}
       {
         "name": "Neptune",
         className: "w-[100px] h-[100px]",
+        pictureSize: 'w-[400px] h-[400px] animate-spin-slow',
         x_position: "42vw",
         scale: 1.1,
         "tagline": "Ice Giant",

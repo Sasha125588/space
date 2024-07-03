@@ -1,10 +1,12 @@
 import { useSelector } from 'react-redux';
+import { motion } from "framer-motion";
 
 interface planetProps {
     planet: {
         currentPlanet: {
             name: string
             tagline: string,
+            pictureSize: string,
             tagline_icon: string,
             picture: string,
             textureUrl: string,
@@ -29,11 +31,11 @@ function PlanetPage() {
   return (
     <>
       <div className="bg-solarSystem h-full">
-        <div className='text-white flex flex justify-between'>
+        <div className='text-white flex justify-between'>
           <div className='flex flex-col p-4 w-[50%]'>
             <h2 className='text-6xl font-semibold '>{planet.name}</h2>
             <div className='flex gap-3 items-center pt-3'>
-              <img className='w-[30px] h-[30px]' src={planet.tagline_icon} alt={planet.tagline} />
+              <motion.img className='w-[30px] h-[30px]' src={planet.tagline_icon} alt={planet.tagline} />
               <h3 className='text-lg'>{planet.tagline}</h3>
             </div>
             <div className='flex justify-between '>
@@ -43,7 +45,7 @@ function PlanetPage() {
                 <h4>Number of moons: <p className='font-semibold'>{planet.numberOfMoons}</p></h4>
                 <h4>Namesake: <p className='font-semibold'>{planet.namesake}</p></h4>                
               </div>
-              <img className='w-[400px] h-[400px]' src={planet.picture} alt={planet.name} />
+              <motion.img className={planet.pictureSize} src={planet.picture} alt={planet.name} />
             </div>
             <p className='text-xl '>{planet.description}</p>
           </div>
