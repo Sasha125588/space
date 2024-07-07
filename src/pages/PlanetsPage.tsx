@@ -1,7 +1,8 @@
 import Planets from "../components/planets/Planets.tsx";
 import { useContext } from "react";
-import GalleryContext, { IplanetsInfo } from "../context/crypto-context";
+import GalleryContext from "../context/crypto-context";
 import { motion } from "framer-motion";
+import { IplanetsInfo } from "../context/context-types/types.tsx";
 
 function PlanetsPage() {
   const { planets } = useContext(GalleryContext);

@@ -1,23 +1,9 @@
 import { useSelector } from 'react-redux';
+import { photoPageProps } from './pages-types/types';
 
-
-export type Props1 = {
-  photo: {
-    currentPhoto: {
-      date: string;
-      copyright:string
-      title: string;
-      media_type:string
-      service_version: string
-      hdurl: string;
-      explanation: string;
-      url: string;
-    }
-  }
-};
 
 function PhotoPage() {
-  const photo = useSelector((state: Props1) => state.photo.currentPhoto);
+  const photo = useSelector((state: photoPageProps) => state.photo.currentPhoto);
 
   if (!photo) return null;
 
@@ -26,7 +12,7 @@ function PhotoPage() {
       <div className="bg-solarSystem text-white  ">
         <div className="text-white bg-black flex justify-center h-full">
       <div className="">
-        <div className="w-[100%] h-full bg-zinc-700  flex justify-between p-4">
+        <div className="w-[100%] h-full bg-zinc-900  flex justify-between p-4">
           <div className="w-[70%] flex flex-col items-center">
             <h1 className="mb-3 text-xl	font-semibold">{photo.title}</h1>
             <img className="rounded-lg w-[90%] h-[700px]" src={photo.url} />

@@ -1,13 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { Iplanet, IplanetsInfo } from "../../context/crypto-context";
 import { setCurrentPlanet } from "../../redux/planet/reducer";
 import { Select, Space } from 'antd';
 import { useEffect, useState } from "react";
+import { SelectPlanetProps } from "../components-types/types";
+import { Iplanet } from "../../context/context-types/types";
 
-interface SelectPlanetProps {
-  planets: IplanetsInfo[];
-}
 
 function SelectPlanet({ planets }: SelectPlanetProps) {
   const [select, setSelect] = useState(false);

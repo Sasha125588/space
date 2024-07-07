@@ -1,30 +1,9 @@
 import { useSelector } from 'react-redux';
 import { motion } from "framer-motion";
-
-interface planetProps {
-    planet: {
-        currentPlanet: {
-            name: string
-            tagline: string,
-            pictureSize: string,
-            tagline_icon: string,
-            picture: string,
-            textureUrl: string,
-            description: string,
-            distanceFromSun: string,
-            yearLength: string,
-            numberOfMoons: number,
-            namesake: string,
-            rings: {
-              "url_exists": boolean,
-            },
-            spaceTexture_url: string
-        }
-      }
-}
+import { planetPageProps } from './pages-types/types';
 
 function PlanetPage() {
-  const planet = useSelector((state: planetProps) => state.planet.currentPlanet);
+  const planet = useSelector((state: planetPageProps) => state.planet.currentPlanet);
 
   if (!planet) return null;
 

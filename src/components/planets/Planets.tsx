@@ -1,8 +1,8 @@
 import { motion } from "framer-motion"
 import {useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux";
-import { IplanetsInfo } from "../../context/crypto-context";
 import { setCurrentPlanet } from "../../redux/planet/reducer";
+import { IplanetsInfo } from "../../context/context-types/types";
 
 
 const Planet = ({ name, className, scale, picture, x }: { name:string, className:string, scale:number, picture:string, x:string}) => {

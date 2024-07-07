@@ -1,21 +1,12 @@
 import {useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux";
 import { setCurrentPhoto } from "../../redux/photo/reducer";
+import { galleryProps } from "../components-types/types";
 
 
 
-export type Props = {
-  date: string;
-  copyright:string
-  title: string;
-  media_type:string
-  service_version: string
-  hdurl: string;
-  explanation: string;
-  url: string;
-};
 
-export const GalleryItem = ({ photo }: { photo: Props }) => {
+export const GalleryItem = ({ photo }: { photo: galleryProps }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
