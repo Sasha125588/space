@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './styles/form.css'
 import { useState } from 'react'
 
-const RegisterForm = () => {
+const RegisterForm = ({handleClick}: {handleClick: any}) => {
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
 
@@ -11,9 +11,10 @@ const RegisterForm = () => {
     <div className="registration form">
       <header>Register</header>
       <form action="#">
-        <input type="text" placeholder="Enter your email"/>
-        <input type="password" placeholder="Create a password"/>
-        <input type="button" className="button" value="Signup"/>
+        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"/>
+        <input type="password" value={pass} onChange={(e) => setPass(e.target.value)} placeholder="Create a password"/>
+        <input type="button" className="button" onClick={() => handleClick(email, pass)} value="Signup"/>
+        <button></button>
       </form>
       <div className="signup">
         <span className="signup">Already have an account?
