@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import { store } from './redux/index';
 import PlanetPage from './pages/PlanetPage';
 import Header from './components/header/Header';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 
 function App() {
@@ -17,6 +19,12 @@ function App() {
       <div className="">
         <Routes>
           <Route path="/" element={<HomePage />} />
+        </Routes>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
         <Routes>
           <Route path="/planets" element={<PlanetsPage />} />

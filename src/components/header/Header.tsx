@@ -43,10 +43,7 @@ const Header = () => {
         <motion.div className="flex items-center text-center justify-center">
           <ul className="flex gap-14 text-lg font-mont font-normal text-neutral-200 ">
             <motion.li whileHover={{ scale: 1.1 }}>
-              <a href="#">
-                {' '}
-                <Link to="/planets">Planets</Link>
-              </a>
+              <Link to="/planets">Planets</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
               <a href="#">Research</a>
@@ -55,7 +52,7 @@ const Header = () => {
               <a href="#">Projects</a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <a href="#"><Link to="/gallery">Gallery</Link></a>
+              <Link to="/gallery">Gallery</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
               <a href="#">About</a>

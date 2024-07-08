@@ -166,7 +166,7 @@ export const planetsInfo: IplanetsInfo[] = [
       "name": "Нептун",
       className: "w-[100px] h-[100px]",
       pictureSize: 'w-[400px] h-[400px] animate-spin-slow',
-      x_position: "42vw",
+      x_position: "41vw",
       scale: 1.1,
       "tagline": "Крижаний гігант",
       "tagline_icon": "https://img.icons8.com/ios-glyphs/30/ffffff/snowflake.png",
