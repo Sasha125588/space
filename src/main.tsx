@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import './firebase';
 import { Layout } from './layout/Layout';
 import { GalleryContextProvider } from './context/crypto-context';
 

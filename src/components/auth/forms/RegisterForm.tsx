@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 import './styles/form.css'
+import { useState } from 'react'
 
-const Register = () => {
+const RegisterForm = () => {
+  const [email, setEmail] = useState('')
+  const [pass, setPass] = useState('')
+
   return (
     <div className='container mt-12 w-[40%]'>
     <div className="registration form">
@@ -9,7 +13,6 @@ const Register = () => {
       <form action="#">
         <input type="text" placeholder="Enter your email"/>
         <input type="password" placeholder="Create a password"/>
-        <input type="password" placeholder="Confirm your password"/>
         <input type="button" className="button" value="Signup"/>
       </form>
       <div className="signup">
@@ -22,4 +25,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default RegisterForm
