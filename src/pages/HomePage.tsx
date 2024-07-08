@@ -7,7 +7,7 @@ import { useAuth } from '../hooks/useAuth';
 const { Content } = Layout;
 
 function HomePage() {
-  const {isAuth, email} = useAuth()
+  const {isAuth} = useAuth()
 
   return isAuth? (
     <>

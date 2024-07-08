@@ -15,7 +15,7 @@ const { Title } = Typography;
 const Header = () => {
   const { planets } = useContext(GalleryContext);
 
-  const {isAuth, email} = useAuth()
+  const {isAuth} = useAuth()
 
   const SpaceX = 'Space<X>';
 
