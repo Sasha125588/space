@@ -6,8 +6,7 @@ import SelectPlanet from '../planets/SelectPlanet';
 import { useContext } from 'react';
 import GalleryContext from '../../context/crypto-context';
 import { useAuth } from '../../hooks/useAuth';
-
-
+import { MdAccountCircle } from "react-icons/md";
 
 
 const { Title } = Typography;
@@ -20,7 +19,7 @@ const Header = () => {
   const SpaceX = 'Space<X>';
 
 
-  return isAuth? (<motion.div className="px-12 pt-3 w-full	 pb-3 text-center flex items-center justify-between bg-solarSystem">
+  return isAuth? (<motion.div className="px-12 pt-3 w-full pb-3 text-center flex items-center justify-between bg-solarSystem">
   <motion.div className=" ">
     <Link className="flex items-center text-center justify-center" to="/">
       {' '}
@@ -59,7 +58,14 @@ const Header = () => {
       </motion.li>
     </ul>
   </motion.div>
+  <motion.div  className='h-full flex justify-center items-center gap-8'>
   <SelectPlanet planets={planets}/>
+  <motion.div whileHover={{
+          y: -4
+        }}>
+  <MdAccountCircle  style={{ color: 'red' }} className="w-12 h-12 cursor-pointer" />
+  </motion.div>
+  </motion.div>
 </motion.div>) : (
     null
   );

@@ -9,7 +9,7 @@ function PlanetsPage() {
 
   return (
     <>
-    <div className="bg-solarSystem h-screen">
+    <div className="bg-solarSystem h-full">
       <motion.div className="w-full flex items-center justify-center">
       {planets.map((planet: IplanetsInfo) => (
           <Planets planet={planet} />

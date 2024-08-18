@@ -7,7 +7,7 @@ const LoginForm = ({handleClick}: {handleClick: any})  => {
     const [pass, setPass] = useState('')
 
   return (
-    <div className='container w-[40%] mt-12'>
+    <div className='container w-[40%] mt-8'>
         <div className="login form">
       <header>Login</header>
       <form action="#">

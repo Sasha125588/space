@@ -3,7 +3,9 @@ import Login from "../components/auth/Login"
 
 const LoginPage = () => {
   return (
-        <Login />
+    <div className="h-screen w-full bg-bgAuth">
+      <Login />    
+    </div>
   )
 }
 

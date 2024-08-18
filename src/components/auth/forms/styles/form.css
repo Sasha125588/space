@@ -4,9 +4,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
-  background: rgb(4, 63, 52);
-}
+
 .container{
   position: absolute;
   top: 50%;

@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import './styles/form.css'
 import { useState } from 'react'
+import { handleLoginType } from '../Login'
 
-const RegisterForm = ({handleClick}: {handleClick: any}) => {
+const RegisterForm = ({handleClick}: {handleClick: handleLoginType}) => {
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
 
   return (
-    <div className='container mt-12 w-[40%]'>
+    <div className='container mt-8 w-[40%]'>
     <div className="registration form">
       <header>Register</header>
       <form action="#">

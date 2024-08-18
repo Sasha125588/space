@@ -2,7 +2,9 @@ import Register from "../components/auth/Register"
 
 const RegisterPage = () => {
   return (
-    <Register />    
+    <div className="h-screen w-full bg-bgAuth">
+      <Register />    
+    </div>
   )
 }
 

@@ -30,7 +30,7 @@ function Planets({planet}: {planet: IplanetsInfo}) {
   
   return (
     <div>
-    <motion.div className="bg-solarSystem text-white pt-60 flex items-center" onClick={handleClick} >
+    <motion.div className="bg-solarSystem h-full text-white pt-60 flex items-center" onClick={handleClick} >
                 <Planet name={planet.name} className={planet.className} scale={planet.scale} x={planet.x_position} picture={planet.picture} />
       </motion.div>
     </div>

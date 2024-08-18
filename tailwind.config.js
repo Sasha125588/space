@@ -19,6 +19,7 @@ export default {
         yellow: '#FFFF00',
         primary: '#B63E96', // 240,86,199
         primaryDark: '#58E6D9', // 80,230,217
+        bgAuth: '#043f34'
       },
       animation: {
         "spin-slow": "spin 12s linear infinite",

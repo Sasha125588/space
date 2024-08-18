@@ -3,7 +3,7 @@ import { Divider } from 'antd';
 const AppContent = () => {
   return (
     <>
-      <div className="h-full px-12 text-start  text-white flex flex-col">
+      <div className="h-full px-12 text-start  text-white flex flex-col ">
         <div className="mt-16 w-[40%] tracking-tighter ">
           <h2 className=" text-8xl uppercase	font-semibold">
             Discover <br /> beyond <br /> space

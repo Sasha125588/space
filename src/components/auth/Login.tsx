@@ -4,7 +4,6 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { setUser } from "../../redux/auth/user/reducer";
 
-
 export type handleLoginType = (email: string, pass: string) => void
 
 export interface ButtonProps {
@@ -12,7 +11,7 @@ export interface ButtonProps {
 }
 
 export interface handleLoginTypeInterface{
-  email: string,
+  email: any,
   pass: string
 }
 
@@ -25,6 +24,7 @@ const Login = () => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, pass)
     .then(({user}) => {
+      console.log(user)
       dispatch(setUser({
         id: user.uid,
         email: user.email,
@@ -35,7 +35,9 @@ const Login = () => {
   }
 
   return (
+    <div>
       <LoginForm handleClick={handleLogin}/>
+    </div>
   )
 }
 

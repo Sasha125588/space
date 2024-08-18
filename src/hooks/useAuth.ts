@@ -1,15 +1,12 @@
 import { useSelector } from "react-redux";
+import { userState } from "../redux/auth/user/reducer";
 
-export interface userState {
-    user: {
-        email: string | null,
-        token:string | null,
-        id: string | null
-    }
+export interface userAuth {
+    user: userState
 }
 
 export function useAuth() {
-    const {email, token, id} = useSelector((state: userState) => state.user)
+    const {email, token, id} = useSelector((state: userAuth) => state.user)
 
     return {
         isAuth: !!email,

@@ -7,8 +7,8 @@ export interface userState {
 }
 const initialState:userState = {
     email: null,
-    token:null,
-    id:null,
+    token: null,
+    id: null,
 }
 
 

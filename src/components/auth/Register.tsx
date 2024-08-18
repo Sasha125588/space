@@ -23,7 +23,9 @@ const Register = () => {
   }
 
   return (
-    <RegisterForm handleClick={handleRegister} />
+    <div>
+      <RegisterForm handleClick={handleRegister} />
+    </div>
   )
 }
 
